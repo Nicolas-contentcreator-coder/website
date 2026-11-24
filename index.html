@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nicolas Dkhissi · Jouw social media van A tot Z</title>
+<meta name="description" content="Ik kom 2 à 4 uur bij jou shooten en maak content voor een hele maand: script, opname, montage en publicatie. Meer bereik, meer klanten.">
+<meta property="og:title" content="Nicolas Dkhissi · Jouw social media, van A tot Z">
+<meta property="og:description" content="Script, opname, montage en publicatie. Alles uit handen, in NL en FR.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#141414;
+    --ink-2:#3b3b3b;
+    --muted:#6b6b6b;
+    --paper:#f7f4ef;
+    --card:#ffffff;
+    --line:#e6e0d6;
+    --red:#d1342f;
+    --red-dark:#a92621;
+    --lilac:#e7e3ff;
+    --radius:22px;
+    --max:1160px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  h1,h2,h3{font-family:"Bricolage Grotesque",Inter,sans-serif;line-height:1.02;letter-spacing:-.02em;margin:0}
+  h2{font-size:clamp(34px,5vw,56px);font-weight:800}
+  h3{font-size:22px;font-weight:700}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  section{padding:96px 0}
+  .eyebrow{display:inline-block;font:600 13px/1 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:18px}
+  .lead{font-size:19px;color:var(--ink-2);max-width:620px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .15s ease, background .15s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-red{background:var(--red);color:#fff}
+  .btn-red:hover{background:var(--red-dark)}
+  .btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:#fff}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:20;background:rgba(247,244,239,.86);backdrop-filter:blur(12px);border-bottom:1px solid transparent}
+  header.scrolled{border-bottom-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{font:800 22px/1 "Bricolage Grotesque",sans-serif;text-decoration:none;letter-spacing:-.02em}
+  .logo span{color:var(--red)}
+  .nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0}
+  .nav ul a{text-decoration:none;font-weight:500;font-size:15px;color:var(--ink-2)}
+  .nav ul a:hover{color:var(--red)}
+  .nav .btn{padding:11px 20px;font-size:15px}
+
+  /* hero */
+  .hero{padding:72px 0 88px}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .hero h1{font-size:clamp(46px,7.2vw,92px);font-weight:800}
+  .hero h1 em{font-style:normal;color:var(--red)}
+  .hero .lead{margin:26px 0 34px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-points{display:flex;gap:22px;flex-wrap:wrap;margin-top:34px;font-size:15px;color:var(--ink-2)}
+  .hero-points span::before{content:"✓";color:var(--red);font-weight:700;margin-right:8px}
+  .phones{position:relative;height:560px}
+  .phone{position:absolute;width:230px;aspect-ratio:9/16;border-radius:30px;overflow:hidden;border:7px solid #111;box-shadow:0 30px 60px rgba(20,20,20,.22);background:#111}
+  .phone img{width:100%;height:100%;object-fit:cover}
+  .phone .tag{position:absolute;left:10px;bottom:10px;background:#fff;color:var(--ink);font:600 12px/1 Inter;padding:8px 10px;border-radius:999px}
+  .phone .tag b{color:var(--red)}
+  .p1{left:0;top:70px;transform:rotate(-7deg)}
+  .p2{left:50%;top:0;transform:translateX(-50%) rotate(1deg);z-index:2;width:250px}
+  .p3{right:0;top:90px;transform:rotate(8deg)}
+
+  /* logos */
+  .logos{padding:36px 0 40px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .logos p{text-align:center;margin:0 0 22px;font-size:14px;color:var(--muted);letter-spacing:.04em}
+  .logo-row{display:flex;justify-content:center;align-items:center;gap:34px;flex-wrap:wrap}
+  .logo-row img{width:76px;height:76px;object-fit:cover;border-radius:50%;filter:grayscale(1);opacity:.8;transition:.2s}
+  .logo-row figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:10px;width:96px}
+  .logo-row figcaption{font-size:13px;font-weight:500;color:var(--ink-2);text-align:center;line-height:1.3}
+  .logo-row figure:hover img{filter:none;opacity:1}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .stat b{display:block;font:800 44px/1 "Bricolage Grotesque",sans-serif;color:var(--red);margin-bottom:8px}
+  .stat span{color:var(--ink-2);font-size:15px}
+
+  /* prices */
+  .prices{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:820px;margin:44px auto 0;align-items:stretch}
+  .price-card.main{transform:translateY(-10px)}
+  .pop{font-style:normal;background:var(--red);color:#fff;border-radius:999px;padding:5px 10px;margin-left:8px;letter-spacing:.06em;font-size:11px}
+  .price-foot{max-width:760px;margin:28px auto 0;text-align:center;display:flex;flex-direction:column;gap:12px}
+  .price-foot .small{font-size:14px;color:var(--muted);margin:0}
+  .price-foot .noface{margin:0}
+  .price-card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:34px;display:flex;flex-direction:column;gap:16px}
+  .price-card.main{border:2px solid var(--red);box-shadow:0 24px 50px rgba(209,52,47,.12)}
+  .price-card .plan{font:600 13px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+  .amount{display:flex;align-items:flex-end;gap:4px 10px;flex-wrap:wrap}
+  .amount b{font:800 52px/0.9 "Bricolage Grotesque",sans-serif}
+  .amount span{color:var(--muted);font-size:14px;line-height:1.3;padding-bottom:4px}
+  .amount .from{width:100%;font-size:14px;font-weight:600;color:var(--ink-2);padding-bottom:0}
+  .price-card ul{list-style:none;margin:6px 0;padding:0}
+  .price-card li{padding:9px 0 9px 30px;position:relative;border-bottom:1px solid var(--line);font-size:15.5px}
+  .price-card li::before{content:"✓";position:absolute;left:4px;color:var(--red);font-weight:700}
+  .price-card p{margin:0;color:var(--ink-2)}
+  .price-card .btn{align-self:flex-start;margin-top:auto}
+  .noface{background:var(--lilac);border-radius:14px;padding:12px 14px;font-size:14.5px;color:var(--ink)!important}
+  .price-card .small{font-size:13.5px;color:var(--muted)}
+
+  /* small creator option */
+  .face-mini{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;background:var(--lilac);border-radius:var(--radius);padding:26px 30px}
+  .face-mini img{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:top}
+  .face-mini h3{margin-bottom:6px}
+  .face-mini p{margin:0;color:var(--ink-2);font-size:15.5px;max-width:620px}
+
+  /* service */
+  .service{background:var(--ink);color:#fff;border-radius:36px;margin:0 16px}
+  .service .lead{color:#cfcfcf}
+  .service .eyebrow{color:#ff8a84}
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:56px}
+  .step{background:#1f1f1f;border:1px solid #2c2c2c;border-radius:var(--radius);padding:26px 22px}
+  .step .n{font:800 15px/1 "Bricolage Grotesque";color:#ff8a84;margin-bottom:38px;display:block}
+  .step h3{font-size:21px;margin-bottom:10px}
+  .step p{margin:0;font-size:15px;color:#bdbdbd;line-height:1.55}
+  .you{margin-top:28px;display:flex;align-items:center;gap:14px;background:#262626;border-radius:var(--radius);padding:20px 24px;font-size:16px;color:#e8e8e8}
+  .you strong{color:#fff}
+
+  /* work */
+  .work-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+  .reels{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px}
+  .reel{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:9/16;background:#ddd}
+  .reel img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+  .reel:hover img{transform:scale(1.04)}
+  .reel{display:block;margin:0;text-decoration:none}
+  .reel figcaption{position:absolute;inset:auto 0 0 0;padding:44px 16px 16px;background:linear-gradient(transparent,rgba(0,0,0,.78));color:#fff}
+  .reel figcaption b{display:block;font:700 18px/1.1 "Bricolage Grotesque"}
+  .reel figcaption span{font-size:13px;opacity:.85}
+  .reel .views{position:absolute;top:12px;left:12px;background:var(--red);color:#fff;font:600 12px/1 Inter;padding:7px 10px;border-radius:999px}
+  .reels{grid-template-columns:repeat(5,1fr)}
+  .reel video{width:100%;height:100%;object-fit:cover;display:block;cursor:pointer}
+  .reel .sound{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;display:grid;place-items:center;cursor:pointer;padding:0}
+  .reel .sound svg{width:18px;height:18px}
+  .reel .sound .on{display:none}.reel.unmuted .sound .on{display:block}.reel.unmuted .sound .off{display:none}
+
+  /* process */
+  .process{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+  .timeline{list-style:none;margin:0;padding:0;counter-reset:t}
+  .timeline li{position:relative;padding:0 0 30px 64px;counter-increment:t}
+  .timeline li::before{content:counter(t);position:absolute;left:0;top:0;width:42px;height:42px;border-radius:50%;background:var(--card);border:1.5px solid var(--ink);display:grid;place-items:center;font:700 16px/1 "Bricolage Grotesque"}
+  .timeline li::after{content:"";position:absolute;left:20px;top:46px;bottom:4px;width:1.5px;background:var(--line)}
+  .timeline li:last-child::after{display:none}
+  .timeline h3{margin:6px 0 6px}
+  .timeline p{margin:0;color:var(--ink-2)}
+  .commit{margin-top:8px;background:var(--card);border:1.5px solid var(--red);border-radius:var(--radius);padding:20px 24px}
+  .commit b{display:block;font:700 19px/1.3 "Bricolage Grotesque",sans-serif;margin-bottom:4px}
+  .commit span{color:var(--ink-2);font-size:15.5px}
+  .process-photo{border-radius:28px;overflow:hidden;position:sticky;top:100px}
+  .process-photo{display:flex;flex-direction:column;align-items:center;gap:22px;border-radius:0;overflow:visible}
+  .rig{width:100%;max-width:460px}
+  .iphone-note{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px;max-width:360px;text-align:center}
+  .iphone-note b{display:block;font:700 18px/1.3 "Bricolage Grotesque",sans-serif;margin-bottom:4px}
+  .iphone-note span{color:var(--ink-2);font-size:15px}
+
+  /* face option */
+  .face{background:var(--lilac);border-radius:36px;margin:0 16px}
+  .face-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+  .face-photo{position:relative}
+  .face-photo img{border-radius:28px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 30px 60px rgba(20,20,20,.18)}
+  .badge{position:absolute;right:-14px;top:24px;background:var(--red);color:#fff;font:700 14px/1.2 "Bricolage Grotesque";padding:12px 16px;border-radius:16px;transform:rotate(6deg)}
+  .opt{display:inline-block;background:#fff;border-radius:999px;padding:7px 14px;font-weight:600;font-size:13px;margin-bottom:18px}
+  .face ul{margin:26px 0 32px;padding:0;list-style:none}
+  .face li{padding:10px 0 10px 34px;position:relative;border-bottom:1px solid rgba(20,20,20,.08)}
+  .face li::before{content:"→";position:absolute;left:0;color:var(--red);font-weight:700}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
+  .about p{color:var(--ink-2);max-width:620px}
+  .langs{display:flex;gap:10px;margin-top:22px}
+  .langs span{border:1.5px solid var(--ink);border-radius:999px;padding:7px 16px;font-weight:600;font-size:14px}
+  .about-img img{border-radius:28px;aspect-ratio:3/4;object-fit:cover;width:100%}
+
+  /* quotes */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+  .quote{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+  .quote p{margin:0;font:500 20px/1.4 "Bricolage Grotesque",sans-serif}
+  .quote p::before{content:"“";display:block;font-size:56px;line-height:.6;color:var(--red);margin-bottom:12px}
+  .who{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)}
+  .who img{width:40px;height:40px;border-radius:50%;object-fit:cover}
+  .who b{color:var(--ink);display:block}
+
+  /* faq */
+  .faq{max-width:820px;margin:44px auto 0}
+  details{border-bottom:1px solid var(--line);padding:22px 0}
+  summary{cursor:pointer;list-style:none;font:700 20px/1.3 "Bricolage Grotesque";display:flex;justify-content:space-between;gap:20px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--red);font-size:26px;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{margin:12px 0 0;color:var(--ink-2)}
+
+  /* contact */
+  .contact{background:var(--red);color:#fff;border-radius:36px;margin:0 16px 16px;text-align:center}
+  .contact h2{font-size:clamp(40px,6.5vw,80px)}
+  .contact .lead{color:#ffe1df;margin:22px auto 36px}
+  .contact .btn-white{background:#fff;color:var(--red)}
+  .contact .btn-line{border:1.5px solid #fff;color:#fff}
+  .contact .btn-line:hover{background:#fff;color:var(--red)}
+  .contact-meta{margin-top:30px;font-size:15px;color:#ffe1df}
+  .contact-meta a{color:#fff}
+  footer{padding:28px 0 40px;font-size:14px;color:var(--muted)}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  .wa-float{position:fixed;right:18px;bottom:18px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.2)}
+  .wa-float svg{width:30px;height:30px;fill:#fff}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  @media (max-width:980px){
+    .hero-grid,.process,.face-grid,.about-grid{grid-template-columns:1fr}
+    .phones{height:470px;max-width:520px;margin:0 auto;width:100%}
+    .phone{width:190px}.p2{width:205px}
+    .steps{grid-template-columns:repeat(2,1fr)}
+    .reels{display:flex;flex-wrap:wrap;justify-content:center}
+    .reels .reel{width:calc(50% - 9px)}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .quotes{grid-template-columns:1fr}
+    .prices{grid-template-columns:1fr}
+    .face-mini{grid-template-columns:1fr}
+    .face-mini .btn{grid-column:1 / -1;justify-self:start}
+    .process-photo{position:static;max-width:460px;margin:0 auto}
+    .face-photo{max-width:420px}
+    .about-img{max-width:420px}
+    .nav ul{display:none}
+    .logo-row{gap:18px;align-items:flex-start}
+    .logo-row figure{width:86px}
+  }
+  @media (max-width:560px){
+    body{font-size:16px}
+    section{padding:72px 0}
+    .wrap{padding:0 20px}
+    .hero{padding:40px 0 64px}
+    .phones{height:380px}
+    .phone{width:150px;border-width:5px;border-radius:22px}.p2{width:165px}
+    .p1{top:56px}.p3{top:70px}
+    .steps{grid-template-columns:1fr}
+    .step .n{margin-bottom:16px}
+    .stat{padding:22px}.stat b{font-size:34px}
+    .service,.face,.contact{margin:0 8px;border-radius:26px}
+    .contact{margin-bottom:8px}
+    .badge{right:8px}
+    .nav .btn{padding:10px 16px;font-size:14px}
+    .logo{font-size:19px}
+    .nav{gap:12px}
+    .reels{gap:12px}
+    .face-mini{grid-template-columns:1fr;padding:24px}
+    .price-card{padding:26px}
+    .amount b{font-size:48px}
+    .price-card.main{transform:none}
+    .logo-row{gap:14px 10px}
+    .logo-row figure{width:76px}
+    .logo-row figcaption{font-size:11.5px}
+    .logo-row img{width:54px;height:54px}
+    .phone .tag{font-size:10px;padding:6px 8px;white-space:nowrap;left:8px;bottom:8px}
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="logo" href="#top">Nicolas Dkhissi<span>.</span></a>
+    <ul>
+      <li><a href="#aanbod">Aanbod</a></li>
+            <li><a href="#werkwijze">Werkwijze</a></li>
+      <li><a href="#prijzen">Prijzen</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-red" href="#contact">Gratis strategiegesprek</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Social media, volledig uit handen</span>
+        <h1>Jouw social media,<br><em>van A tot Z.</em></h1>
+        <p class="lead">Ik zorg volledig voor jouw social media. Ik kom 2 à 4 uur bij jou shooten en maak daar content voor een hele maand van, zonder dat jij er nog iets voor moet doen. <strong>Meer bereik, meer klanten.</strong></p>
+        <div class="hero-cta">
+          <a class="btn btn-red" href="#contact">Plan een gratis strategiegesprek →</a>
+        </div>
+        <div class="hero-points">
+          <span>Content voor een hele maand</span>
+          <span>Jij hoeft niets te doen</span>
+        </div>
+      </div>
+      <div class="phones" aria-hidden="true">
+        <div class="phone p1"><img src="assets/work/zapetti.jpg" alt=""><span class="tag">Zapetti</span></div>
+        <div class="phone p2"><img src="assets/work/burgerking-car.jpg" alt=""><span class="tag"><b>328K</b> views · Burger King</span></div>
+        <div class="phone p3"><img src="assets/work/stroxx-koelbox.jpg" alt=""><span class="tag">STROXX</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS -->
+  <div class="logos">
+    <div class="wrap">
+      <p>Merken waarvoor ik content maakte</p>
+      <div class="logo-row">
+        <figure><img src="assets/logos/burgerking.png" alt=""><figcaption>Burger King</figcaption></figure>
+        <figure><img src="assets/logos/coolblue.png" alt=""><figcaption>Coolblue</figcaption></figure>
+        <figure><img src="assets/logos/hubo.png" alt=""><figcaption>Hubo</figcaption></figure>
+        <figure><img src="assets/logos/accountable.png" alt=""><figcaption>Accountable</figcaption></figure>
+        <figure><img src="assets/logos/lecot.png" alt=""><figcaption>Lecot – STROXX</figcaption></figure>
+        <figure><img src="assets/logos/zapetti.png" alt=""><figcaption>Zapetti</figcaption></figure>
+        <figure><img src="assets/logos/hetbelgischrijbewijs.png" alt=""><figcaption>Het Belgisch Rijbewijs</figcaption></figure>
+      </div>
+    </div>
+  </div>
+
+  <!-- AANBOD -->
+  <section id="aanbod">
+    <div class="service reveal">
+      <div class="wrap" style="padding-top:88px;padding-bottom:88px">
+        <span class="eyebrow">Wat ik voor je doe</span>
+        <h2>Alles, van idee<br>tot online.</h2>
+        <p class="lead" style="margin-top:20px">Geen losse video's, maar een vaste partner die je socials elke maand draaiende houdt. Jij hoeft alleen je zaak open te houden.</p>
+        <div class="steps">
+          <div class="step"><span class="n">01</span><h3>Strategie</h3><p>We bepalen wie je wilt bereiken, en ik werk volledig een strategie voor je uit.</p></div>
+          <div class="step"><span class="n">02</span><h3>Script</h3><p>Ik schrijf hooks en scripts die mensen doen stoppen met scrollen.</p></div>
+          <div class="step"><span class="n">03</span><h3>Shoot</h3><p>2 à 4 uur bij jou ter plaatse, volledig met de iPhone. Goed voor 8 tot 12 video's per maand.</p></div>
+          <div class="step"><span class="n">04</span><h3>Montage</h3><p>Snelle edit, ondertitels, muziek en effecten.</p></div>
+          <div class="step"><span class="n">05</span><h3>Publiceren</h3><p>Captions, planning en posten op Instagram, TikTok, YouTube en alle andere socials die voor jou van toepassing zijn.</p></div>
+        </div>
+        <div class="you"><span style="font-size:22px">☕</span><span><strong>Jouw werk:</strong> één keer per maand de deur openzetten en je akkoord geven. De rest doe ik.</span></div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="stats reveal">
+        <div class="stat"><b>328K</b><span>views op één video voor Burger King</span></div>
+        <div class="stat"><b>252K</b><span>views op één video voor Accountable</span></div>
+        <div class="stat"><b>7+</b><span>merken, van fastfood tot bouw en tech</span></div>
+              </div>
+    </div>
+  </section>
+
+  <!-- WERKWIJZE -->
+  <section id="werkwijze">
+    <div class="wrap process">
+      <div class="reveal">
+        <span class="eyebrow">Zo werken we samen</span>
+        <h2>Simpel.<br>In 3 stappen.</h2>
+        <p class="lead" style="margin:20px 0 40px">Je weet altijd wat er komt, wanneer het online gaat en wie je moet bellen: mij.</p>
+        <ol class="timeline">
+          <li><h3>We zitten samen</h3><p>Ik neem je socials over, of maak ze voor je aan.</p></li>
+          <li><h3>We plannen de shoots</h3><p>Voor de komende 3 maanden ligt alles vast.</p></li>
+          <li><h3>Ik kom, shoot, edit en publiceer</h3><p>Done. Jij hoeft niets te doen.</p></li>
+        </ol>
+        <div class="commit">
+          <b>We starten altijd met 3 maanden.</b>
+          <span>Dan zie je het meeste resultaat. Wil je toch stoppen? Dat kan op elk moment.</span>
+        </div>
+      </div>
+      <div class="process-photo reveal">
+        <img class="rig" src="assets/iphone-setup.jpg" alt="Nicolas' setup: een iPhone in een rig met handgrepen en een DJI-microfoon" loading="lazy">
+        <div class="iphone-note"><b>📱 Mijn setup: 100% iPhone</b><span>iPhone in 4K, een rig en een draadloze micro. Klein en snel, dus iedereen blijft zichzelf voor de camera.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIJZEN -->
+  <section id="prijzen" style="padding-top:0">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center">
+        <span class="eyebrow">Prijzen</span>
+        <h2>Duidelijk vanaf<br>dag één.</h2>
+      </div>
+      <div class="prices reveal">
+        <div class="price-card">
+          <span class="plan">Start</span>
+          <div class="amount"><span class="from">vanaf</span><b>€900</b><span>/maand<br>excl. btw</span></div>
+          <ul>
+            <li>Strategie op maat</li>
+            <li>Shoot van ± 2 uur bij jou</li>
+            <li>8 video's per maand</li>
+            <li>Professionele montage</li>
+            <li>Publiceren op al je socials</li>
+          </ul>
+          <a class="btn btn-ghost" href="#contact">Kies Start →</a>
+        </div>
+        <div class="price-card main">
+          <span class="plan">Groei <em class="pop">Populair</em></span>
+          <div class="amount"><span class="from">vanaf</span><b>€1.300</b><span>/maand<br>excl. btw</span></div>
+          <ul>
+            <li>Alles van Start</li>
+            <li>Shoot van ± 3 uur bij jou</li>
+            <li>12 video's + foto's per maand</li>
+            <li>Maandelijkse evaluatie van je cijfers</li>
+          </ul>
+          <a class="btn btn-red" href="#contact">Kies Groei →</a>
+        </div>
+      </div>
+      <div class="price-foot reveal">
+        <p class="noface">🎥 Mijn gezicht is een extra optie.</p>
+        <p class="small">Start voor 3 maanden, daarna stoppen wanneer je wilt. Meerdere vestigingen of iets anders nodig? <a href="#contact">Vraag een voorstel op maat.</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREATOR OPTIE (klein) -->
+  <section id="creator" style="padding-top:0">
+    <div class="wrap reveal">
+      <div class="face-mini">
+        <div>
+          <h3>Echt liever zelf niet in beeld?</h3>
+          <p>Dan kan iemand van je team het gezicht zijn. Of, als extra optie (niet inbegrepen in de pakketten), sta ik zelf voor de camera. Dat deed ik al voor Burger King, Coolblue, Hubo en vele anderen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVER MIJ -->
+  <section class="about">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="eyebrow">Over mij</span>
+        <h2>Hallo, ik ben<br>Nicolas.</h2>
+        <p style="margin-top:22px">Wat begon als een hobby op YouTube, TikTok en Instagram, werd mijn job. Het is nog altijd mijn grootste hobby.</p>
+        <p>Vandaag help ik merken om social-first content te bedenken en te maken, om zichtbaar te worden en zo meer klanten te bereiken. Een beetje zot, bakken energie en vooral véél ideeën.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section style="padding-top:24px">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center">
+        <span class="eyebrow">Wat klanten zeggen</span>
+        <h2>Gewoon uit de chat.</h2>
+      </div>
+      <div class="quotes reveal">
+        <div class="quote">
+          <p>Proficiat met de viral video! Goede uitwerking die duidelijk aanspreekt bij de kleine zelfstandigen.</p>
+          <div class="who"><img src="assets/logos/accountable.png" alt=""><div><b>Valesca Wilms</b>Accountable</div></div>
+        </div>
+        <div class="quote">
+          <p>Zeer leuke content opnieuw. We willen de samenwerking graag verlengen.</p>
+          <div class="who"><img src="assets/logos/lecot.png" alt=""><div><b>Klant in powertools</b>Bouw &amp; DIY</div></div>
+        </div>
+        <div class="quote">
+          <p>Je viens de regarder ta vidéo… c'est vraiment bien fait.</p>
+          <div class="who"><span style="width:40px;height:40px;border-radius:50%;background:var(--lilac);display:grid;place-items:center;font-weight:700;color:var(--ink)">FR</span><div><b>Klant</b>Video in het Frans</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding-top:24px">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center">
+        <span class="eyebrow">Vragen</span>
+        <h2>Goed om te weten.</h2>
+      </div>
+      <div class="faq reveal">
+        <details><summary>Moet ik zelf voor de camera staan?</summary><p>Liefst wel! Jouw merk is jouw gezicht, of dat van een van je medewerkers. Heb je een bedrijf met meerdere vestigingen en kun je niet overal zelf in beeld komen? Dan is een ander gezicht zeker oké. Dan word ik graag het gezicht van je merk.</p></details>
+        <details><summary>Hoeveel tijd kost het mij?</summary><p>Dat hangt af van je project. Soms is het al in een uur geregeld, maar reken gemiddeld op 2 à 4 uur per maand. Dat laat ik je vooraf weten, samen met de strategie. Beloofd: ik hou het kort en val je niet lastig.</p></details>
+        <details><summary>Hoeveel video's krijg ik?</summary><p>8 video's per maand met Start, 12 video's + foto's met Groei. We spreken het vooraf af, zodat je precies weet wat je krijgt.</p></details>
+        <details><summary>Zit ik ergens aan vast?</summary><p>We starten altijd met 3 maanden, want dan zie je het meeste resultaat. Wil je toch stoppen, dan kan dat op elk moment.</p></details>
+        <details><summary>Waarom film je met de iPhone?</summary><p>Omdat het werkt. Video's die eruitzien alsof een echte klant of medewerker ze maakte, voelen eerlijk en worden meer bekeken dan gepolijste reclame. Dat is social proof: mensen geloven mensen.</p></details>
+        <details><summary>Waar ben je actief?</summary><p>In heel België: Vlaanderen, Brussel en Wallonië.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="padding:0">
+    <div class="contact reveal">
+      <div class="wrap" style="padding-top:96px;padding-bottom:96px">
+        <span class="eyebrow" style="color:#ffe1df">Klaar om te starten?</span>
+        <h2>Let's make it<br>happen.</h2>
+        <p class="lead">Stuur me je bedrijfsnaam en welke socials je al hebt. Dan analyseer ik wat je hebt en je markt, en nodig ik je uit voor een gratis strategiegesprek.</p>
+        <div class="hero-cta" style="justify-content:center">
+          <a class="btn btn-white" href="https://wa.me/32497230702?text=Hallo%20Nicolas%2C%20ik%20wil%20graag%20een%20strategiegesprek%20voor%20onze%20socials.">Stuur een WhatsApp →</a>
+          <a class="btn btn-line" href="mailto:Nicolas-contentcreator@nicolasdkhissi.com?subject=Social%20media%20voor%20mijn%20bedrijf">Stuur een e-mail</a>
+        </div>
+        <p class="contact-meta"><a href="tel:+32497230702">0497 23 07 02</a> · <a href="mailto:Nicolas-contentcreator@nicolasdkhissi.com">Nicolas-contentcreator@nicolasdkhissi.com</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Nicolas Dkhissi · Content creator &amp; social media</span>
+    <span>Privacybeleid</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/32497230702" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.4zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.2A11.8 11.8 0 0 0 1.8 17.8L.1 24l6.4-1.7a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.6z"/></svg>
+</a>
+
+<script>
+  const header = document.querySelector('header');
+  addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 10), {passive:true});
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+<script>
+(function(){
+  document.querySelectorAll('.reel-video').forEach(function(fig){
+    var v=fig.querySelector('video'), b=fig.querySelector('.sound');
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){es.forEach(function(e){
+        if(e.isIntersecting){v.play().catch(function(){});}else{v.pause();}
+      });},{threshold:.5}).observe(v);
+    }
+    function toggle(){v.muted=!v.muted;fig.classList.toggle('unmuted',!v.muted);if(!v.muted){v.currentTime=0;v.play().catch(function(){});}}
+    b.addEventListener('click',toggle); v.addEventListener('click',toggle);
+  });
+})();
+</script>
+</body>
+</html>
